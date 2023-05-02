@@ -74,10 +74,13 @@ delay(1000);</br>
 }</br>
 
 ## CIRCUIT DIAGRAM:
+![WhatsApp Image 2023-05-02 at 9 07 45 AM](https://user-images.githubusercontent.com/132323440/235718618-ce99d2b9-90be-4124-8bfc-7724a595f7b7.jpeg)
 
 
 ## OUTPUT:
+![WhatsApp Image 2023-05-02 at 8 45 42 AM (1)](https://user-images.githubusercontent.com/132323440/235719965-f8931d37-6611-420b-bcc0-ecff645d25e8.jpeg)
 
 ## RESULT:
-
+Thus the distance of the obstacle is measured using ultrasonic sensor and display the value
+in serial monitor using Arduino UNO controller.
 Thus the logical operation was performed by Arduino UNO controller
