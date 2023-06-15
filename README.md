@@ -43,42 +43,35 @@ Logic gates are the basic building blocks of any digital system. It is an electr
 ![image](https://user-images.githubusercontent.com/71547910/235332254-db13d222-1246-4b57-bbb2-3ab2287ccaa8.png)
 
 ## PROGRAM:
-void setup() 
-{</br>
-pinMode(13, OUTPUT);</br>
-Serial.begin(9600);</br>
-}</br>
-void loop() 
-{</br>
-if (Serial.available() > 0) {</br>
-int state = Serial.read();</br>
-if (state == '5') {</br>
-digitalWrite(13, HIGH);</br>
-Serial.println("LED ON");</br>
-}</br>
-if (state == '8' ) {</br>
-digitalWrite(13, LOW);</br>
-Serial.println("LED OFF");</br>
-}</br>
-}</br>
-delay(50);</br>
-}</br>
+int bs0 = 0;         // variable for reading the pushbutton status</br>
+int bs5 = 0;</br>
 void setup() {</br>
-Serial.begin(9600);</br>
+  pinMode(13, OUTPUT);</br>
+  pinMode(0, INPUT);</br>
+  pinMode(5, INPUT);</br>
 }</br>
 void loop() {</br>
-Serial.print('H');</br>
-delay(1000);</br>
-Serial.print('L');</br>
-delay(1000);</br>
-}</br>
+
+  bs0 = digitalRead(0);</br>
+  bs5 = digitalRead(5);</br>
+
+  if (bs0&bs5) </br>
+  {</br>
+      digitalWrite(13, HIGH);</br>
+  } </br>
+  else </br>
+  {</br>
+    
+    digitalWrite(13, LOW);</br>
+  }</br>
+ }</br>
 
 ## CIRCUIT DIAGRAM:
 ![WhatsApp Image 2023-05-02 at 9 07 45 AM](https://user-images.githubusercontent.com/132323440/235718618-ce99d2b9-90be-4124-8bfc-7724a595f7b7.jpeg)
 
 
 ## OUTPUT:
-![WhatsApp Image 2023-05-02 at 8 45 42 AM (1)](https://user-images.githubusercontent.com/132323440/235719965-f8931d37-6611-420b-bcc0-ecff645d25e8.jpeg)
+![image](https://user-images.githubusercontent.com/132323363/235729493-2d1dec46-1cf7-42af-8017-831c1255f5c9.png)
 
 ## RESULT:
 Thus the distance of the obstacle is measured using ultrasonic sensor and display the value
